@@ -47,6 +47,14 @@ $('.tablasAdjuntos tbody').on( 'click', '.btnImprimirConstancia', function () {
 
     } );
 
+$('.tablasAdjuntos tbody').on( 'click', '.btnImprimirConstancia2', function () {  
+  
+      var idAdjuntos =  $(this).attr("idAdjuntos");
+    
+      window.open("extensiones/tcpdf/pdf/ConstanciaArchivos2021.php?id="+idAdjuntos, "_blank");
+    
+        } );   
+
 /*==================================================================
                       = MOSTRAR - EDITAR PRODUCTO =
 ==================================================================== */ 

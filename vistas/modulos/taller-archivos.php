@@ -51,6 +51,7 @@
            <th>Nombre</th>
         <!--   <th>Correo</th>  -->
            <th>Taller</th>
+           <th id="Controlanios">Año</th>
            <th style="width: 110px">Acciones</th>
            
          </tr> 
@@ -60,6 +61,7 @@
        </table>
 
        <input type="hidden" value="<?php echo $_SESSION['Perfil']; ?>" id="perfilOculto">
+
 
       </div>
 
