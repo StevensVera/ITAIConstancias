@@ -1,0 +1,7 @@
+C:\xampp\htdocs\ITAIConstancias\extensiones\tcpdf\pdf\ConstanciaArchivos2021.php
+
+C:\xampp\htdocs\ITAIConstancias\vistas\js\adjuntos.js
+
+C:\xampp\htdocs\ITAIConstancias\ajax\datatable-adjuntos.ajax.php
+
+C:\xampp\htdocs\ITAIConstancias\extensiones\tcpdf\pdf\images\OrganizacionArchivos2021.png

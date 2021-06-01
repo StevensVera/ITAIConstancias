@@ -37,7 +37,7 @@ static public function ctrMostrarAdjuntos($item, $valor, $orden){
 
 			   	$datos = array("id"=>$_POST["idAdjuntos"],
 			   				   "nombre"=>$_POST["EditarNombre"],
-					           "correo"=>$_POST["EditarCorreo"],
+								"anios"=>$_POST["EditarAnios"],
 					           "taller"=>$_POST["EditarTaller"]);
 
 			   	$respuesta = ModeloAdjuntos::mdlEditarAdjuntos($tabla, $datos);
@@ -81,7 +81,8 @@ static public function ctrMostrarAdjuntos($item, $valor, $orden){
  	$tabla = "tallerarchivos";
 
  	$datos = array("nombre" => $_POST["nuevoNombre"],
-                   "correo" => $_POST["nuevoCorreo"],
+                   
+				   "anios" => $_POST["nuevoAnios"],
                     "taller" => $_POST["nuevoTaller"]);
 
  	$respuesta = ModeloAdjuntos::mdlIngresarAdjuntos($tabla,$datos);

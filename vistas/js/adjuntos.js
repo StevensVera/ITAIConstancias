@@ -78,9 +78,11 @@ $(".tablasAdjuntos").on("click", ".btnEditarAdjuntos", function(){
         console.log("respuesta",respuesta);
 
         $("#EditarNombre").val(respuesta["nombre"]);
-        $("#EditarCorreo").val(respuesta["correo"]);
+        $("#EditarAnios").val(respuesta["anios"]);
+        //$("#EditarCorreo").val(respuesta["correo"]);
         $("#EditarTaller").html(respuesta["taller"]);
         $("#EditarTaller").val(respuesta["taller"]);
+        
 
       } // if
 
@@ -97,7 +99,8 @@ $(".tablasAdjuntos").on("click", ".btnEditarAdjuntos", function(){
 
     var idAdjuntos = $(this).attr("idAdjuntos");
     var nombre = $(this).attr("nombre");
-    var correo = $(this).attr("correo");
+    var anios = $(this).attr("anios");
+    //var correo = $(this).attr("correo");
     var taller = $(this).attr("taller");
 
     swal({
@@ -113,7 +116,7 @@ $(".tablasAdjuntos").on("click", ".btnEditarAdjuntos", function(){
         }).then(function(result) {
         if (result.value) {
 
-          window.location = "index.php?ruta=taller-archivos&idAdjuntos="+idAdjuntos+"&nombre="+nombre+"&correo="+correo+"&taller="+taller;
+          window.location = "index.php?ruta=taller-archivos&idAdjuntos="+idAdjuntos+"&nombre="+nombre+"&anios="+anios+"&taller="+taller;
 
         } // if 
 

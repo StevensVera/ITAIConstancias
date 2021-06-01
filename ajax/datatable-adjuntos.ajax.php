@@ -59,13 +59,13 @@ public function mostrarTablaAdjunto(){
 
 	
 
-			   $botones = "<button class='btn btn-warning btnEditarAdjuntos' idAdjuntos='".$adjunto[$i]["id"]."' data-toggle='modal' data-target='#modalEditarAdjuntos'><i class='fa fa-pencil'></i></button> <button class='btn btn-primary btnImprimirConstancia' idAdjuntos='".$adjunto[$i]["id"]."' title='GENERAR ARCHIVO'><i class='fa fa-file-pdf-o'></i></button> <button class='btn btn-danger btnEliminarAdjuntos' idAdjuntos='".$adjunto[$i]["id"]."' nombre='".$adjunto[$i]["nombre"]."' correo='".$adjunto[$i]["correo"]."' taller='".$adjunto[$i]["taller"]."'><i class='fa fa-times'></i></button>";
+			   $botones = "<button class='btn btn-warning btnEditarAdjuntos' idAdjuntos='".$adjunto[$i]["id"]."' data-toggle='modal' data-target='#modalEditarAdjuntos'><i class='fa fa-pencil'></i></button> <button class='btn btn-primary btnImprimirConstancia' idAdjuntos='".$adjunto[$i]["id"]."' title='GENERAR ARCHIVO'><i class='fa fa-file-pdf-o'></i></button> <button class='btn btn-danger btnEliminarAdjuntos' idAdjuntos='".$adjunto[$i]["id"]."' nombre='".$adjunto[$i]["nombre"]."'  taller='".$adjunto[$i]["taller"]."'><i class='fa fa-times'></i></button>";
 
 	        }else{
 				
 	
 		 	
-			  $botones = "<button class='btn btn-warning btnEditarAdjuntos' idAdjuntos='".$adjunto[$i]["id"]."' data-toggle='modal' data-target='#modalEditarAdjuntos'><i class='fa fa-pencil'></i></button> <button class='btn btn-primary btnImprimirConstancia2' idAdjuntos='".$adjunto[$i]["id"]."' title='GENERAR ARCHIVO'><i class='fa fa-file-pdf-o'></i></button> <button class='btn btn-danger btnEliminarAdjuntos' idAdjuntos='".$adjunto[$i]["id"]."' nombre='".$adjunto[$i]["nombre"]."' correo='".$adjunto[$i]["correo"]."' taller='".$adjunto[$i]["taller"]."'><i class='fa fa-times'></i></button>";
+			  $botones = "<button class='btn btn-warning btnEditarAdjuntos' idAdjuntos='".$adjunto[$i]["id"]."' data-toggle='modal' data-target='#modalEditarAdjuntos'><i class='fa fa-pencil'></i></button> <button class='btn btn-primary btnImprimirConstancia2' idAdjuntos='".$adjunto[$i]["id"]."' title='GENERAR ARCHIVO'><i class='fa fa-file-pdf-o'></i></button> <button class='btn btn-danger btnEliminarAdjuntos' idAdjuntos='".$adjunto[$i]["id"]."' nombre='".$adjunto[$i]["nombre"]."' taller='".$adjunto[$i]["taller"]."'><i class='fa fa-times'></i></button>";
 
 			  }
 			}

@@ -70,10 +70,10 @@ class ModeloAdjuntos{
 
 	static public function mdlIngresarAdjuntos($tabla,$datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre,correo,taller) VALUES (:nombre,:correo,:taller)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre,anios,taller) VALUES (:nombre,:anios,:taller)");
 
 		$stmt ->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-		$stmt ->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
+		$stmt ->bindParam(":anios", $datos["anios"], PDO::PARAM_STR);
 		$stmt ->bindParam(":taller", $datos["taller"], PDO::PARAM_STR);
 
 		if ($stmt -> execute()) {
@@ -128,11 +128,11 @@ static public function mdlMostrarAdjuntosEditar($tabla,$item,$valor){
 
 static public function mdlEditarAdjuntos($tabla,$datos){
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre, correo = :correo, taller = :taller  WHERE nombre = :nombre");
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre, anios = :anios, taller = :taller  WHERE nombre = :nombre");
 
 		$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-		$stmt->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
+		$stmt->bindParam(":anios", $datos["anios"], PDO::PARAM_STR);
 		$stmt->bindParam(":taller", $datos["taller"], PDO::PARAM_STR);
 
 		if($stmt->execute()){

@@ -48,7 +48,7 @@
          
          <tr>
            <th>#</th>
-           <th>Nombre</th>
+           <th style="width: 300px">Nombre</th>
         <!--   <th>Correo</th>  -->
            <th>Taller</th>
            <th id="Controlanios">Año</th>
@@ -122,29 +122,48 @@
 
              <!-- ENTRADA PARA EL TALLER  -->
             
-            <div class="form-group" style="width: 80%; margin: 0 auto;">
+            <div class="form-group row" style="width: 100%; margin: 0 auto; padding-bottom: 15px">
+            
+             <div class="col-xs-9" >
               
-              <div class="input-group">
+               <div class="input-group">
               
                 <span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></span> 
             
                 <select class="form-control input-lg" name="nuevoTaller">
-                
-                <option value="">Seleccionar Taller</option>
+                 
+                 <option value="">Seleccionar Taller</option>
 
-                <option value="Organización de los Archivos">Organización de los Archivos</option>
+                 <option value="Organización de los Archivos">Organización de los Archivos</option>
+ 
+                 <option value="Funcionalidades y Manejo del Sistema de Portales de Obligaciones de Transparencia (SIPOT)">Funcionalidades y Manejo del Sistema de Portales de Obligaciones de Transparencia (SIPOT)</option>
 
-                <option value="Funcionalidades y Manejo del Sistema de Portales de Obligaciones de Transparencia (SIPOT)">Funcionalidades y Manejo del Sistema de Portales de Obligaciones de Transparencia (SIPOT)</option>
+                 <option value="Obligaciones de Transparencia y Llenado de Formatos">Obligaciones de Transparencia y Llenado de Formatos</option>
 
-                <option value="Obligaciones de Transparencia y Llenado de Formatos">Obligaciones de Transparencia y Llenado de Formatos</option>
-
-                <option value="Generalidades en Materia de Protección de Datos Personales">Generalidades en Materia de Protección de Datos Personales</option>
+                 <option value="Generalidades en Materia de Protección de Datos Personales">Generalidades en Materia de Protección de Datos Personales</option>
 
 
-              </select>
+                </select>
 
+               </div> 
 
               </div>
+
+              <div class="col-xs-3">
+
+              <div class="input-group">
+            
+                   <div class="input-group">
+              
+                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span> 
+
+                     <input type="text" class="form-control input-lg" name="nuevoAnios" placeholder="Años" required>
+
+                 </div>
+
+                </div>
+            
+            </div>
 
             </div>
   
@@ -235,32 +254,56 @@
           <hr>     <!--  LINEA HORIZONTAL --> 
 
              <!-- ENTRADA PARA EL TALLER  -->
+
+            <div class="form-group row" style="width: 100%; margin: 0 auto; padding-bottom: 15px">
             
-            <div class="form-group" style="width: 80%; margin: 0 auto;">
+             <div class="col-xs-9" >
               
-              <div class="input-group">
+               <div class="input-group">
               
                 <span class="input-group-addon"><i class="fa fa-building" aria-hidden="true"></i></span> 
-
+            
                 <select class="form-control input-lg" name="EditarTaller">
                 
-                <option value="" id="EditarTaller"></option>
+                 <option value="" id="EditarTaller"></option>
 
-                <option value="Organización de los Archivos">Organización de los Archivos</option>
+                 <option value="Organización de los Archivos">Organización de los Archivos</option>
+ 
+                 <option value="Funcionalidades y Manejo del Sistema de Portales de Obligaciones de Transparencia (SIPOT)">Funcionalidades y Manejo del Sistema de Portales de Obligaciones de Transparencia (SIPOT)</option>
 
-                <option value="Funcionalidades y Manejo del Sistema de Portales de Obligaciones de Transparencia (SIPOT)">Funcionalidades y Manejo del Sistema de Portales de Obligaciones de Transparencia (SIPOT)</option>
+                 <option value="Obligaciones de Transparencia y Llenado de Formatos">Obligaciones de Transparencia y Llenado de Formatos</option>
 
-                <option value="Obligaciones de Transparencia y Llenado de Formatos">Obligaciones de Transparencia y Llenado de Formatos</option>
-
-                <option value="Generalidades en Materia de Protección de Datos Personales">Generalidades en Materia de Protección de Datos Personales</option>
+                 <option value="Generalidades en Materia de Protección de Datos Personales">Generalidades en Materia de Protección de Datos Personales</option>
 
 
-              </select>
+                </select>
 
+               </div> 
 
               </div>
 
+              <div class="col-xs-3">
+
+              <div class="input-group">
+            
+                   <div class="input-group">
+              
+                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span> 
+
+                     <input type="text" class="form-control input-lg" name="EditarAnios" id="EditarAnios" required>
+
+                  <input type="hidden"  name="idAnios" id="idAnios">
+
+                 </div>
+
+                </div>
+            
+              </div>
+
             </div>
+            
+
+
   
           </div>
 
