@@ -169,7 +169,7 @@ static public function mdlEditarAdjuntos($tabla,$datos){
 
 		 }
 
-		$stmt -> close();
+		$stmt -> close(); 
 
 		$stmt = null;
 

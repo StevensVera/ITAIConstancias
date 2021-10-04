@@ -1,6 +1,7 @@
 <?php 
 
 /*CONTROLADORES*/
+
 /* controlador categorias */
 require_once "../controladores/adjunto.controlador.php";
 

@@ -1,12 +1,8 @@
-
 var perfilOculto = $("#perfilOculto").val();
 
-console.log("perfilOculto", perfilOculto);
-
-
-var table = $(".tablasAdjuntos").DataTable({
+var table = $(".tablasAdjuntosInformatica").DataTable({
    
-  "ajax":"ajax/datatable-adjuntos.ajax.php?perfilOculto="+perfilOculto,
+  "ajax":"ajax/datatable-adjuntosInformaticaSISAI.ajax.php?perfilOculto="+perfilOculto,
   "deferRender": true,
   "retrieve": true,
   "processing": true,
@@ -42,35 +38,35 @@ var table = $(".tablasAdjuntos").DataTable({
 
 });
 
-$('.tablasAdjuntos tbody').on( 'click', '.btnImprimirConstancia', function () {  
+$('.tablasAdjuntosInformatica tbody').on( 'click', '.btnImprimirConstanciaInformatica2021', function () {  
   
-  var idAdjuntos =  $(this).attr("idAdjuntos");
+  var idAdjuntos =  $(this).attr("idAdjuntosInformatica");
 
-  window.open("extensiones/tcpdf/pdf/Constancia.php?id="+idAdjuntos, "_blank");
+  window.open("extensiones/tcpdf/pdf/ConstanciaInformaticaSISAI2.php?id="+idAdjuntos, "_blank");
 
-    } );
+    });
 
-$('.tablasAdjuntos tbody').on( 'click', '.btnImprimirConstancia2', function () {  
+$('.tablasAdjuntosInformatica tbody').on( 'click', '.btnImprimirConstanciaInformatica2022', function () {  
   
-      var idAdjuntos =  $(this).attr("idAdjuntos");
+      var idAdjuntos =  $(this).attr("idAdjuntosInfomatica");
     
-      window.open("extensiones/tcpdf/pdf/ConstanciaArchivos2021.php?id="+idAdjuntos, "_blank");
+      window.open("extensiones/tcpdf/pdf/ConstanciaInformaticaSISAI2022.php?id="+idAdjuntos, "_blank");
     
-        } );   
+     });   
 
 /*==================================================================
                       = MOSTRAR - EDITAR PRODUCTO =
 ==================================================================== */ 
 
-$(".tablasAdjuntos").on("click", ".btnEditarAdjuntos", function(){
+$(".tablasAdjuntosInformatica").on("click", ".btnEditarAdjuntosInformatica", function(){
 
-  var idAdjuntos = $(this).attr("idAdjuntos");
+  var idAdjuntosInformatica = $(this).attr("idAdjuntosInformatica");
 
   var datos = new FormData();
-  datos.append("idAdjuntos", idAdjuntos);
-  console.log("idAdjuntos",idAdjuntos);
+  datos.append("idAdjuntosInformatica", idAdjuntosInformatica);
+  console.log("idAdjuntosInformatica",idAdjuntosInformatica);
   $.ajax({
-    url: "ajax/adjuntos.ajax.php",
+    url: "ajax/adjuntosInformaticaSISIA.ajax.php",
     method: "POST",
         data: datos,
         cache: false,
@@ -80,13 +76,12 @@ $(".tablasAdjuntos").on("click", ".btnEditarAdjuntos", function(){
       success: function(respuesta){
         console.log("respuesta",respuesta);
 
-        $("#EditarNombre").val(respuesta["nombre"]);
-        $("#EditarAnios").val(respuesta["anios"]);
+        $("#EditarNombreInformatica").val(respuesta["nombre"]);
+        $("#EditarAniosInformatica").val(respuesta["anios"]);
         //$("#EditarCorreo").val(respuesta["correo"]);
-        $("#EditarTaller").html(respuesta["taller"]);
-        $("#EditarTaller").val(respuesta["taller"]);
+        $("#EditarTallerInformatica").html(respuesta["taller"]);
+        $("#EditarTallerInformatica").val(respuesta["taller"]);
         
-
       } // if
 
   }) //then
@@ -95,12 +90,12 @@ $(".tablasAdjuntos").on("click", ".btnEditarAdjuntos", function(){
 
 
 /*==================================================================
-                    =  ELIMINAR ADJUNTOS =
+                    =  ELIMINAR REGISTRO DE TABLAS =
  ===================================================================*/
 
- $(".tablasAdjuntos").on("click", ".btnEliminarAdjuntos", function(){
+ $(".tablasAdjuntosInformatica").on("click", ".btnEliminarAdjuntosInformatica", function(){
 
-    var idAdjuntos = $(this).attr("idAdjuntos");
+    var idAdjuntos = $(this).attr("idAdjuntosInformatica");
     var nombre = $(this).attr("nombre");
     var anios = $(this).attr("anios");
     //var correo = $(this).attr("correo");
@@ -119,7 +114,7 @@ $(".tablasAdjuntos").on("click", ".btnEditarAdjuntos", function(){
         }).then(function(result) {
         if (result.value) {
 
-          window.location = "index.php?ruta=taller-archivos&idAdjuntos="+idAdjuntos+"&nombre="+nombre+"&anios="+anios+"&taller="+taller;
+          window.location = "index.php?ruta=taller-informatica-SISAI-2&idAdjuntosInformatica="+idAdjuntos+"&nombre="+nombre+"&anios="+anios+"&taller="+taller;
 
         } // if 
 

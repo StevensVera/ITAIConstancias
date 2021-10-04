@@ -105,17 +105,7 @@
 
 				if($_SESSION["Perfil"] == "Administrador" || $_SESSION["Perfil"] == "Invitado"){
 
-					echo '<li>
-
-						<a href="taller-monitoreo-sipot">
-						
-							<i class="fa fa-circle-o"></i>
-							
-							<span>Taller SIPOT</span>
-		
-						</a>
-
-					</li>
+					echo '
 					<li>
 
 						<a href="taller-monitoreo-obligaciones">
@@ -166,6 +156,63 @@
 							<i class="fa fa-circle-o"></i>
 							
 							<span>Taller Generalidades</span>
+		
+						</a>
+
+					</li>';
+
+				 }
+				 
+				 
+				?>
+					
+				</ul>
+
+			</li>
+
+			<!-- MENU INFORMÁTICA -->
+			<li class="treeview">
+				
+				<a href="">
+					
+				<i class="fa fa-at" aria-hidden="true"></i>
+					<span>Tecnologias</span>
+					 <span class="pull-right-container">
+					 	
+					 	<i class="fa fa-angle-left pull-right"></i>
+
+					 </span>
+
+				</a>
+
+				<ul class="treeview-menu">
+
+				<?php
+				
+
+				//if($_SESSION["Perfil"] == "Administrador" || $_SESSION["Perfil"] == "Invitado"){
+
+			if($_SESSION["Perfil"] == "Administrador" || $_SESSION["Perfil"] == "Invitado"){	
+
+					echo '
+					<li>
+
+						<a href="taller-monitoreo-sipot">
+						
+							<i class="fa fa-circle-o"></i>
+							
+							<span>Taller SIPOT</span>
+		
+						</a>
+
+					</li>
+					<li>
+
+						<a href="taller-informatica-SISAI-2">
+						
+							<i class="fa fa-circle-o"></i>
+							
+							<span>Taller SISAI-2.0</span>
 		
 						</a>
 

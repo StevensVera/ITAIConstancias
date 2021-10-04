@@ -186,7 +186,7 @@ static public function ctrBorrarUsuario(){
 
 		$respuesta = ModeloUsuarios::mdlBorrarUsuario($tabla, $datos);
 
-		if ($respuesta = "ok") {
+		if ($respuesta == "ok") {
 
 			echo '<script>
 
@@ -349,9 +349,9 @@ static public function ctrMostrarUsuariosConexion($item,$valor){
 
 		$tabla = "historialconexion";
 
-		$respuesta = ModelosReporteConexion::mdlMostrarReporteConexion($tabla, $item, $valor);
+		//$respuesta = ModelosReporteConexion::mdlMostrarReporteConexion($tabla, $item, $valor);
 
-		return $respuesta;
+//		return $respuesta;
 
 	}
 

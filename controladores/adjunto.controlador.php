@@ -15,6 +15,9 @@ static public function ctrMostrarAdjuntos($item, $valor, $orden){
  	return $respuesta;	
  }
 
+
+ /* =============== CONTROLADOR PARA MOSTRAR LOS NOMBRES EN LA CONSTACION  ================ */
+
  static public function ctrMostrarAdjuntosPDF($item, $valor){
 
 	$tabla = "tallerarchivos";
@@ -44,7 +47,7 @@ static public function ctrMostrarAdjuntos($item, $valor, $orden){
 
 			   	if($respuesta == "ok"){
 
-					echo'<script>
+			  echo'<script>
 
 					swal({
 						  type: "success",
