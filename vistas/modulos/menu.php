@@ -66,15 +66,26 @@
 
 					echo '<li>
 
-						<a href="taller-archivos">
+						    <a href="taller-archivos">
 						
-							<i class="fa fa-circle-o"></i>
+							  <i class="fa fa-circle-o"></i>
 							
-							<span>Taller de Organización</span>
+							    <span>Taller de Organización</span>
 		
-						</a>
+						    </a>
 
-					</li>';
+					      </li>
+						  <li>
+
+						    <a href="taller-archivosgestion">
+						
+							  <i class="fa fa-circle-o"></i>
+							
+							    <span>Taller Gestion Documental</span>
+		
+						    </a>
+
+					      </li>';
 
 				 }
 				 
