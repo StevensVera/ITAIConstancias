@@ -3,7 +3,7 @@
 class Conexion{
 
 	static public function conectar(){
-
+/*
 		$link = new PDO("mysql:host=www.itainayarit.org;dbname=itainaya_itaiconstancias",
 							"itainaya",
 						"ruPm1oT@Oh0s",
@@ -11,8 +11,8 @@ class Conexion{
 		                      PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 		return $link;
+*/	
 
-/*
 
 		$link = new PDO("mysql:host=localhost;dbname=itainaya_itaiconstancias",
 						"root",
@@ -21,7 +21,7 @@ class Conexion{
   						PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 		return $link;
-*/	
+
 
 	  }
 }

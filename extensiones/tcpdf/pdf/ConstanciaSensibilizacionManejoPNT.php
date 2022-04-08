@@ -1,7 +1,7 @@
 <?php
 
-require_once "../../../controladores/adjuntoGestionArchivo.controlador.php";
-require_once "../../../modelos/adjuntosGestionArchivo.modelos.php";
+require_once "../../../controladores/adjuntoSensibilizacionManejoPNT.controlador.php";
+require_once "../../../modelos/adjuntosSensibilizacionManejoPNT.modelos.php";
 //============================================================+
 // File name   : example_028.php
 // Begin       : 2008-03-04
@@ -40,7 +40,7 @@ class imprimirFactura{
 $itemConstanciaArchivos = "id";
 $valorConstanciaArchivos = $this->id;
 		
-$respuestaConstancia = ControladorAdjuntosArchivoGestion::ctrMostrarAdjuntosPDFArchivoGestion($itemConstanciaArchivos,$valorConstanciaArchivos);
+$respuestaConstancia = ControladorAdjuntosSensibilizacionManejoPNT::ctrMostrarAdjuntosPDFSensibilizacionManejoPNT($itemConstanciaArchivos,$valorConstanciaArchivos);
 
 $NombreConstancia = substr($respuestaConstancia['nombre'],0,150);
 
@@ -91,7 +91,7 @@ $auto_page_break = $pdf->getAutoPageBreak();
 // disable auto-page-break
 $pdf->SetAutoPageBreak(false, 0);
 // set bacground image
-$img_file = K_PATH_IMAGES.'JornadaGestionDocumentalArchivos.png';
+$img_file = K_PATH_IMAGES.'constancia_Taller-Sensiblizacion_Tansparencia_Informacion_Manejo_PNT.png';
 $pdf->Image($img_file, 0, 0, 300, 210, '', '', '', false, 300, '', false, false, 0);
 // restore auto-page-break status
 $pdf->SetAutoPageBreak($auto_page_break, $bMargin);
@@ -102,7 +102,7 @@ $pdf->setPageMark();
 
 $bloque11 = <<<EOF
 
-	<table align="center" style="font-family: Arial;font-size:20px; padding-top: 85px; padding-left: 50px;">
+	<table align="center" style="font-family: Arial;font-size:20px; padding-top: 150px; padding-left: 50px;">
 
 		<tr>
       		<td><span style="text-align=center;font-weight:bold;font-size:35pt;">$NombreConstancia</span></td>
@@ -121,7 +121,7 @@ $pdf->writeHTML($html, true, false, true, false, '');
 // ---------------------------------------------------------
 
 //Close and output PDF document
-$pdf->Output('Constancia Jornada de Acompañamiento en Gestión Documental y Administración de Archivos.pdf', 'I');
+$pdf->Output('Constancia.pdf', 'I');
 
 }
 }

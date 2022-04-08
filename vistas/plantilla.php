@@ -128,6 +128,7 @@
             $_GET["ruta"]== "taller-monitoreo-obligaciones" ||
             $_GET["ruta"]== "taller-informatica-SISAI-2" ||
             $_GET["ruta"]== "taller-archivosgestion" ||
+            $_GET["ruta"]== "taller-sensibilizacion-manejo-PNT" ||
             $_GET["ruta"]== "salir" ) {
 
           include "modulos/".$_GET["ruta"].".php";
@@ -167,6 +168,7 @@
  <script type="text/javascript" src="vistas/js/adjuntosMonitoreoSIPOT.js"></script>
  <script type="text/javascript" src="vistas/js/adjuntosPersonalesGeneralidades.js"></script>
  <script type="text/javascript" src="vistas/js/adjuntosInformaticaSISAI.js"></script>
+ <script type="text/javascript" src="vistas/js/adjuntosSensibilizacionManejoPNT.js"></script>
 
 </body>
 </html>

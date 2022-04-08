@@ -15,6 +15,8 @@ require_once "controladores/adjuntoPersonales.controlador.php";
 require_once "controladores/adjuntoSISAI.controlador.php";
 // CONTROLADOR - ADJUNTOSGESTIONARCHIVO
 require_once "controladores/adjuntoGestionArchivo.controlador.php";
+// CONTROLADOR - ADJUNTOSENSIBILIZACIONMANEJOPNT
+require_once "controladores/adjuntoSensibilizacionManejoPNT.controlador.php";
 
 
 // ================== MODELOS ========================//
@@ -30,6 +32,8 @@ require_once "modelos/adjuntosPersonales.modelos.php";
 require_once "modelos/adjuntosSISAI.modelos.php";
 // CONTROLADOR - ADJUNTOSGESTIONARCHIVO
 require_once "modelos/adjuntosGestionArchivo.modelos.php";
+// CONTROLADOR - adjuntosSensibilizacionManejoPNT
+require_once "modelos/adjuntosSensibilizacionManejoPNT.modelos.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrPlantilla();

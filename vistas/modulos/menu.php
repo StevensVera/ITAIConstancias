@@ -227,6 +227,17 @@
 		
 						</a>
 
+					</li>
+					<li>
+
+						<a href="taller-sensibilizacion-manejo-PNT">
+						
+							<i class="fa fa-circle-o"></i>
+							
+							<span>Taller 06/04/22</span>
+		
+						</a>
+
 					</li>';
 
 				 }
