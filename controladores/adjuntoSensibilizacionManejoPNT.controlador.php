@@ -26,17 +26,15 @@ static public function ctrMostrarAdjuntosPDFSensibilizacionManejoPNT($item, $val
      EDITAR MOSTRAR EDITAR ADJUNTOS TABLA - TALLERMONITOREOSIPOT
     ============================================================= */
 
-	static public function ctrMostrarAdjuntosEditarMonitoreoObligaciones($item, $valor){
+	static public function ctrMostrarAdjuntosEditarSensibilizacionManejoPNT($item, $valor){
 
 		$tabla = "tallersensibilizacionmanejopnt";
 
-		$respuesta = ModeloAdjuntosMonitoreo::mdlMostrarAdjuntosEditarMonitoreoObligaciones($tabla, $item, $valor);
+		$respuesta = ModeloAdjuntosSensibilizacionManejoPNT::mdlMostrarAdjuntosSensibilizacionManejoPNT($tabla, $item, $valor);
 
 		return $respuesta;
 	
 	}
-
-
 
 /*=======================================================
 	   EDITAR ADJUNTOS TABLA - MonitoreoObligaciones
@@ -85,6 +83,51 @@ static public function ctrMostrarAdjuntosPDFSensibilizacionManejoPNT($item, $val
 	} // if isset
 
  }
+
+  /*=======================================================
+                    EDITAR ADJUNTOS - NO
+  =======================================================*/
+
+  static public function ctrEditarAdjuntosSensibilizacionManejoPNT(){
+
+	if(isset($_POST["EditarAniosInformatica"])){
+
+				  $tabla = "tallersensibilizacionmanejopnt";
+
+				  $datos = array("id"=>$_POST["idAdjuntos"],
+								 "nombre"=>$_POST["EditarNombre"],
+							   "anios"=>$_POST["EditarAniosInformatica"],
+							   "correo"=>$_POST["idEditarCorreo"],
+							  "taller"=>$_POST["EditarTaller"]);
+
+				  $respuesta = ModeloAdjuntosSensibilizacionManejoPNT::mdlEditarAdjuntosSensibilizacionManejoPNT($tabla, $datos);
+
+				  if($respuesta == "ok"){
+
+			 echo'<script>
+
+				   swal({
+						 type: "success",
+						 title: "El Usuario ha sido cambiado correctamente",
+						 showConfirmButton: true,
+						 confirmButtonText: "Cerrar"
+						 }).then(function(result){
+								   if (result.value) {
+
+								   window.location = "taller-sensibilizacion-manejo-PNT";
+
+								   }
+							   })
+
+				   </script>';
+
+			   }
+
+	   }
+
+  
+
+}
 
   /*=====================================================
      BORRAR EDITAR ADJUNTOS TABLA - TALLERMONITOREOSIPOT

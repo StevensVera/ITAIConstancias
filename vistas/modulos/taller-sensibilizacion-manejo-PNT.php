@@ -246,6 +246,7 @@
                 <input type="text" class="form-control input-lg" name="EditarNombre" id="EditarNombre" required>
 
                   <input type="hidden"  name="idAdjuntos" id="idAdjuntos">
+                  <input type="hidden"  name="idEditarCorreo" id="idEditarCorreo">
 
               </div>
 
@@ -274,6 +275,8 @@
                 <option value="Obligaciones de Transparencia y Llenado de Formatos">Obligaciones de Transparencia y Llenado de Formatos</option>
 
                 <option value="Generalidades en Materia de Protección de Datos Personales">Generalidades en Materia de Protección de Datos Personales</option>
+
+                <option value="Taller de Sensibilización en Transparencia, Acceso a la Información y Manejo de Plataforma Nacional de Transparencia">Taller de Sensibilización en Transparencia, Acceso a la Información y Manejo de Plataforma Nacional de Transparencia</option>
 
 
               </select>
@@ -323,12 +326,11 @@
         ======================================-->
     <?php 
     
-     // $editarAdjuntos = new ModeloAdjuntosSensibilizacionManejoPNT();
-      //$editarAdjuntos -> ctrEditarAdjuntosMonitoreoObligaciones();
-    /* 
-      $editarAdjuntos = new ControladorAdjuntosHistoricosArchivos();
-      $editarAdjuntos -> ctrEditarAdjuntosActualizarRR();
-    */
+      $editarAdjuntos = new ControladorAdjuntosSensibilizacionManejoPNT();
+      $editarAdjuntos -> ctrEditarAdjuntosSensibilizacionManejoPNT();
+    
+
+    
     ?>
   
       </form>

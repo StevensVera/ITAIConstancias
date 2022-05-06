@@ -22,31 +22,11 @@ class AjaxAdjuntos{
     
     $valor = $this->idAdjuntos;
 
-    $respuesta = ControladorAdjuntosSensibilizacionManejoPNT::ctrMostrarAdjuntosEditarMonitoreoObligaciones($item, $valor);
+    $respuesta = ControladorAdjuntosSensibilizacionManejoPNT::ctrMostrarAdjuntosEditarSensibilizacionManejoPNT($item, $valor);
 
     echo json_encode($respuesta);
 
   }
-
-
-  /*=============================================
-        VALIDAR NO REPETIR EXPEDIENTE
-  =============================================*/ 
-  
-  
-  public $validarAdjuntos;
-
-   public function ajaxValidarAdjuntos(){
-
-    $item = "expediente";
-    $valor = $this->validarAdjuntos;
-
-    $respuesta = ControladorAdjuntos::ctrMostrarAdjuntosExistente($item, $valor);
-
-    echo json_encode($respuesta);
-
-  }
-  
 
 }
 
@@ -58,17 +38,5 @@ if(isset($_POST["idAdjuntos"])){
   $adjuntos = new AjaxAdjuntos();
   $adjuntos -> idAdjuntos = $_POST["idAdjuntos"];
   $adjuntos -> ajaxEditarAdjuntos();
-}
-
-/*=============================================
-VALIDAR NO REPETIDOS ADJUNTOS
-=============================================*/ 
-
-if (isset($_POST["validarAdjuntos"])) {
-  
-  $valAdjuntos = new AjaxAdjuntos();
-  $valAdjuntos -> validarAdjuntos = $_POST["validarAdjuntos"];
-  $valAdjuntos -> ajaxValidarAdjuntos();
-
 }
 

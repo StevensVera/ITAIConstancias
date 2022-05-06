@@ -105,7 +105,7 @@ $bloque11 = <<<EOF
 	<table align="center" style="font-family: Arial;font-size:20px; padding-top: 150px; padding-left: 50px;">
 
 		<tr>
-      		<td><span style="text-align=center;font-weight:bold;font-size:35pt;">$NombreConstancia</span></td>
+      		<td><span style="text-align=center;font-weight:bold;font-size:30pt;">$NombreConstancia</span></td>
        </tr>
 	</table>
 

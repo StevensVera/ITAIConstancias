@@ -219,17 +219,6 @@
 					</li>
 					<li>
 
-						<a href="taller-informatica-SISAI-2">
-						
-							<i class="fa fa-circle-o"></i>
-							
-							<span>Taller SISAI-2.0</span>
-		
-						</a>
-
-					</li>
-					<li>
-
 						<a href="taller-sensibilizacion-manejo-PNT">
 						
 							<i class="fa fa-circle-o"></i>

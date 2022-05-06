@@ -71,6 +71,7 @@ $(".tablasAdjuntosSensibilizacionManejoPNT").on("click", ".btnEditarAdjuntos", f
 
         $("#EditarNombre").val(respuesta["nombre"]);
         $("#EditarAniosInformatica").val(respuesta["anios"]);
+        $("#idEditarCorreo").val(respuesta["correo"]);
         $("#EditarTaller").html(respuesta["taller"]);
         $("#EditarTaller").val(respuesta["taller"]);
 
